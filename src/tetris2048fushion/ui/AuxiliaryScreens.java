@@ -27,18 +27,58 @@ public class AuxiliaryScreens implements IGameScreen {
     }
 
     // How To Play
-    public void showHowToPlay() {
-        System.out.println("\n========== HOW TO PLAY ==========");
-        System.out.println("1. Observe the falling block.");
-        System.out.println("2. Move Left / Right.");
-        System.out.println("3. Merge equal numbers.");
-        System.out.println("4. Reach 2048 or clear rows.");
-        System.out.println("=================================\n");
+   public void showHowToPlay() {
+    String guide = """
+        ===================== HOW TO PLAY =====================
 
-        System.out.print("Press Enter to return...");
-        sc.nextLine();
-        showMainMenu();
-    }
+        Welcome to Tetris 2048 Fusion!
+
+        Objective:
+        - Combine the gameplay of Tetris and 2048.
+        - Clear lines, merge equal numbers, and earn the highest score.
+
+        Step 1: Observe the Falling Block
+        - A Tetromino falls from the top of the board.
+        - Each cell contains a random value (2, 4, or 8).
+
+        Step 2: Move the Block
+        - Left Arrow  : Move left.
+        - Right Arrow : Move right.
+        - Down Arrow  : Drop faster.
+        - Horizontal movement also shifts the number matrix.
+
+        Step 3: Merge Equal Numbers
+        - Equal numbers merge into a larger value.
+        - Example:
+              2 + 2 = 4
+              4 + 4 = 8
+              8 + 8 = 16
+              ...
+
+        Step 4: Complete the Goal
+        - Clear rows to score points.
+        - Create larger values up to 2048.
+        - Do not let the blocks reach the top.
+
+        Game Over:
+        - The game ends when no more blocks can enter the board.
+
+        Controls:
+        ← Move Left
+        → Move Right
+        ↓ Soft Drop
+        Space Hard Drop
+        P Pause
+        Esc Back to Menu
+
+        ========================================================
+        Press Enter to return...
+        """;
+
+    System.out.println(guide);
+    sc.nextLine();
+    showMainMenu();
+}
 
     // About Us
     public void showAboutUs() {
